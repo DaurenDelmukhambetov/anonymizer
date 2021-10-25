@@ -2,7 +2,7 @@ package org.dauren.processor
 
 abstract class AbstractDataTransformationProcessor : DataTransformationProcessor {
 
-    override fun transformEmails(matchResult: MatchResult): String {
+    override fun transformEmail(matchResult: MatchResult): String {
         val email = matchResult.value
         val atIndex = email.indexOf("@")
         val username = email.substring(0, atIndex)
@@ -10,7 +10,7 @@ abstract class AbstractDataTransformationProcessor : DataTransformationProcessor
         return "${doTransformEmailUsername(username)}@${doTransformEmailDomainName(host)}"
     }
 
-    override fun transformUrls(matchResult: MatchResult): String {
+    override fun transformUrl(matchResult: MatchResult): String {
         val url = matchResult.value
         val domainNameStartIndex = url.indexOf("://") + 3
         val domainNameEndIndex = url.indexOf("/", startIndex = domainNameStartIndex)
