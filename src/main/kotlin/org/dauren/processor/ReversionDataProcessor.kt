@@ -7,7 +7,7 @@ package org.dauren.processor
  */
 class ReversionDataProcessor : AbstractDataTransformationProcessor() {
 
-    override fun transformDigits(matchResult: MatchResult): String {
+    override fun transformId(matchResult: MatchResult): String {
         return matchResult.value.reversed()
     }
 

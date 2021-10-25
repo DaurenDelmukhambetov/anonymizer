@@ -24,7 +24,7 @@ class InMemoryDictionaryRepository(
         return domainNames.getOrPut(toReplace.lowercase()) { faker.internet().domainName() }
     }
 
-    override fun digits(toReplace: String): String {
+    override fun id(toReplace: String): String {
         return digits.getOrPut(toReplace) { faker.number().digits(toReplace.length) }
     }
 }
