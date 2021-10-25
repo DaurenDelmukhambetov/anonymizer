@@ -1,9 +1,10 @@
 # Anonymizer
 
 This is a simple web service that allows you to mask the next types of sensitive data:
-- emails, by replacing username and domain part of email with random values (`adam.smith@example.com -> economist@email.net`);
-- URLs, by replacing the domain names, and saving the actual nested path inside domain (`https://music.com/artists/adele/tracks/skyfall` -> `https://some.domain/artists/adele/tracks/skyfall`);
-- IDs, by replacing sequence of three or more digits with random numeric sequence same length (`12345 -> 98644`); 
+- **emails**, by replacing username and domain part of email with random values (`adam.smith@example.com -> economist@email.net`);
+- **URLs**, by replacing the domain names, and saving the actual nested path inside domain (`https://music.com/artists/adele/tracks/skyfall` -> `https://some.domain/artists/adele/tracks/skyfall`);
+- **IDs**, by replacing sequence of three or more digits with random numeric sequence same length (`12345 -> 98644`); 
+
 ## Installation
 
 Command bellow launches application locally on port 8080 by default:
