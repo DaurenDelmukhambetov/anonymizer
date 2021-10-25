@@ -5,6 +5,9 @@ This is a simple web service that allows you to mask the next types of sensitive
 - **URLs**, by replacing the domain names, and saving the actual nested path inside domain (`https://music.com/artists/adele/tracks/skyfall` -> `https://some.domain/artists/adele/tracks/skyfall`);
 - **IDs**, by replacing sequence of three or more digits with random numeric sequence same length (`12345 -> 98644`); 
 
+Worth to mention that email addresses masked by segments (username and domain name) to preserve relation between addresses that belong to one domain, e.g. corporate emails.
+For example, `adam.smith@institution.org` and `isaac.newton@institution.org` might be masked as the next email addresses: `economist@place.net` and `physicist@place.net`, preserving the domain of email consistent
+
 ## Installation
 
 Command bellow launches application locally on port 8080 by default:
