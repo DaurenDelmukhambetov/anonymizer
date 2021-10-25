@@ -5,7 +5,7 @@ package org.dauren.processor
  */
 interface DataTransformationProcessor {
 
-    fun transformDigits(matchResult: MatchResult): String
+    fun transformId(matchResult: MatchResult): String
 
     fun transformEmail(matchResult: MatchResult): String
 

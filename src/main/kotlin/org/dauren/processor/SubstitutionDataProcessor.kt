@@ -23,7 +23,7 @@ class SubstitutionDataProcessor(
         return dictionaryRepository.domainName(domainName)
     }
 
-    override fun transformDigits(matchResult: MatchResult): String {
-        return dictionaryRepository.digits(matchResult.value)
+    override fun transformId(matchResult: MatchResult): String {
+        return dictionaryRepository.id(matchResult.value)
     }
 }

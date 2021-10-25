@@ -11,7 +11,7 @@ class Obfuscator(
         if (input.isBlank()) return input
 
         val withReplacedUrls = URL_PATTERN.replace(input, transformationProcessor::transformUrl)
-        val withReplacedDigits = DIGITS_PATTERN.replace(withReplacedUrls, transformationProcessor::transformDigits)
+        val withReplacedDigits = DIGITS_PATTERN.replace(withReplacedUrls, transformationProcessor::transformId)
         return EMAIL_PATTERN.replace(withReplacedDigits, transformationProcessor::transformEmail)
     }
 

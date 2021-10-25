@@ -6,6 +6,6 @@ interface DictionaryRepository {
 
     fun domainName(toReplace: String): String
 
-    fun digits(toReplace: String): String
+    fun id(toReplace: String): String
 
 }
