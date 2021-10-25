@@ -4,6 +4,10 @@ import com.github.javafaker.Faker
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentMap
 
+/**
+ * The repo provides in-memory storage for sensitive data dictionary
+ * and generates a new random value for every non-existent key
+ */
 class InMemoryDictionaryRepository(
     private val usernames: ConcurrentMap<String, String> = ConcurrentHashMap(),
     private val domainNames: ConcurrentMap<String, String> = ConcurrentHashMap(),

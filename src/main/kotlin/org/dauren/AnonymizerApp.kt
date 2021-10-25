@@ -19,7 +19,7 @@ fun main() {
         }
         routing {
             get("/") {
-                call.respondText("Hello, world!")
+                call.respondText("Welcome to Anonymizer App!")
             }
             post("/anonymize") {
                 val inputText = call.receive<Text>()

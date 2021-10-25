@@ -1,9 +1,14 @@
 package org.dauren.processor
 
+import org.dauren.repository.DictionaryRepository
 import org.dauren.repository.InMemoryDictionaryRepository
 
+/**
+ * The processor masks sensitive data by replacing values
+ * from given dictionary
+ */
 class SubstitutionDataProcessor(
-    private val dictionaryRepository: InMemoryDictionaryRepository = InMemoryDictionaryRepository()
+    private val dictionaryRepository: DictionaryRepository = InMemoryDictionaryRepository()
 ) : AbstractDataTransformationProcessor() {
 
     override fun doTransformEmailUsername(username: String): String {

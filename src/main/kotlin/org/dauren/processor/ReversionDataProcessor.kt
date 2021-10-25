@@ -1,5 +1,10 @@
 package org.dauren.processor
 
+/**
+ * The processor transforms sensitive data by reversing values
+ *
+ * This implementation is not practical but good for testing and debugging usage
+ */
 class ReversionDataProcessor : AbstractDataTransformationProcessor() {
 
     override fun transformDigits(matchResult: MatchResult): String {
